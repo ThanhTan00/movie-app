@@ -1,5 +1,7 @@
 import api from  './api/axiosConfig';
 import {useState, useEffect} from "react";
+import Layout from './components/Layout';
+import Home from './components/home/Home';
 
 function App() {
 
@@ -21,6 +23,12 @@ function App() {
 
   return (
     <div className="App">
+      <Routes>
+        <Route path="/" element ={<Layout/>}>
+          <Route path="/" element= {<Home/>} ></Route>
+
+        </Route>
+      </Routes>
 
     </div>
   );
